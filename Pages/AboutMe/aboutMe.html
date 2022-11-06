@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutMe</title>
+    <link rel="stylesheet" href="aboutMe.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="percentRing.css">
+
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <script>
+        function autoResponse(width = 900) {
+            var deviceWidth = document.documentElement.clientWidth;
+            if (deviceWidth >= 1200) deviceWidth = 1200;
+            fontSize = deviceWidth / 12;
+            document.getElementsByTagName('html')[0].style['font-size'] = fontSize + 'px';
+        }
+        autoResponse();
+        window.addEventListener('resize', autoResponse);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile">
+            <div class="avatar">
+                <img src="../../mdimg/avatar.jpg" alt="">
+            </div>
+            <div class="card">
+                <div class="info">
+                    <h2>zbwer</h2>
+                    <p>College student from <strong>UESTC</strong> </p>
+                    <p><i class="iconfont icon-31dingwei"></i>Chengdu , China</p>
+                </div>
+                <div class="data">
+                    <ul>
+                        <li>
+                            <h2>6</h2>
+                            <p>Followers</p>
+                        </li>
+                        <li>
+                            <h2>9441</h2>
+                            <p>Views</p>
+                        </li>
+                        <li>
+                            <h2>8</h2>
+                            <p>Articals</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="quickurl">
+                    <div class="circle github">
+                        <a href="#" title="Github"><i class="iconfont icon-GitHub"></i></a>
+                    </div>
+                    <div class="circle bilibili">
+                        <a href="#" title="Bilibili"><i class="iconfont icon-bilibili"></i></a>
+                    </div>
+                    <div class="circle codepen">
+                        <a href="#" title="codepen"><i class="iconfont icon-codepen"></i></a>
+                    </div>
+                </div>
+                <button>Contact me</button>
+            </div>
+        </div>
+        <div class="skill">
+            <h2>Skill</h2>
+            <div class="Skill-cir">
+                <li>
+                    <div class="percentRing">
+                        <div class="percentRing-tmp1"></div>
+                        <div class="percentRing-tmp2"></div>
+                        <div class="percentRing-tmp3">
+                            <span>90%</span>
+                        </div>
+                    </div>
+                    <p>HTML</p>
+                </li>
+                <li>
+                    <div class="percentRing">
+                        <div class="percentRing-tmp1"></div>
+                        <div class="percentRing-tmp2"></div>
+                        <div class="percentRing-tmp3">
+                            <span>83%</span>
+                        </div>
+                    </div>
+                    <p>CSS</p>
+                </li>
+                <li>
+                    <div class="percentRing">
+                        <div class="percentRing-tmp1"></div>
+                        <div class="percentRing-tmp2"></div>
+                        <div class="percentRing-tmp3">
+                            <span>54%</span>
+                        </div>
+                    </div>
+                    <p>JS</p>
+                </li>
+                <li>
+                    <div class="percentRing">
+                        <div class="percentRing-tmp1"></div>
+                        <div class="percentRing-tmp2"></div>
+                        <div class="percentRing-tmp3">
+                            <span>68%</span>
+                        </div>
+                    </div>
+                    <p>C++</p>
+                </li>
+            </div>
+        </div>
+        <div class="intro">
+            <h2>Hey！</h2>
+            <div class="textAboutMe">
+                <p>我来自计算机科学与工程学院👨‍🎓</p>
+                <p>平日里,我喜欢踢足球⚽与轮滑🛹</p>
+                <p>我最喜欢的游戏是Sifu✊和史莱姆牧场🦄</p>
+                <p>我正在通过b站📺学习JavaScript📄</p>
+                <p>我在力扣每日一题坚持了125天🔥</p>
+                <p>我拥有一点UI原型设计经验🎯,自认审美正常</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

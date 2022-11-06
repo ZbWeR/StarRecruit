@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九九乘法表</title>
+    <style>
+        span {
+            display: inline-block;
+            padding: 10px;
+            background-color: lightblue;
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+
+        body {
+            background: linear-gradient(200deg, #f3e7e9, #e3eeff);
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>九九乘法表</h1>
+
+    <script>
+        for (let i = 1; i <= 9; i++) {
+            for (let j = 1; j <= i; j++) {
+                let tmp = i + "*" + j + "=" + i * j;
+                document.write("<span>" + tmp + "</span>");
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+
+</html>

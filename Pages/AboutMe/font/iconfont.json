@@ -1,0 +1,37 @@
+{
+  "id": "3751443",
+  "name": "aboutMe",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "201579",
+      "name": "3.1定位",
+      "font_class": "31dingwei",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "8760135",
+      "name": "codepen",
+      "font_class": "codepen",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "18986691",
+      "name": "GitHub",
+      "font_class": "GitHub",
+      "unicode": "e8c6",
+      "unicode_decimal": 59590
+    },
+    {
+      "icon_id": "26267546",
+      "name": "bilibili",
+      "font_class": "bilibili",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    }
+  ]
+}

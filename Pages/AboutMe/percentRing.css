@@ -1,0 +1,44 @@
+.percentRing {
+    background-color: #6ED4BF;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.percentRing-tmp1 {
+    background-color: #f8f8f8;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    clip: rect(0, 48px, auto, 0);
+    position: absolute;
+}
+
+.percentRing-tmp2 {
+    background-color: #6ED4BF;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    transform: rotate(30deg);
+    clip: rect(0, auto, auto, 48px);
+    position: absolute;
+}
+
+.percentRing-tmp3 {
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    text-align: center;
+}
+
+.percentRing-tmp3>span {
+    display: block;
+    font-size: 24px;
+    color: #000;
+    line-height: 80px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="mock.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="divframe">
+        <div class="loadTitle">
+            <button id="btn">获取数据</button>
+        </div>
+        <div id="jsonTip">
+            <div class="card">
+                <h2>Jenny Trantow</h2>
+                <img src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1135.jpg"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#btn").click(function () {
+            var url = "https://636752e279b0914b75de761f.mockapi.io/users";
+            var request = new XMLHttpRequest();
+            request.open("get", url);
+            request.send(null);
+            request.onload = function () {
+                if (request.status == 200) {
+                    var data = JSON.parse(request.responseText);
+                    console.log(data);
+                    var $jsontip = $("#jsonTip");
+                    var strHTML = "";
+                    $jsontip.empty();
+                    $.each(data, function (infoIndex, info) {
+                        strHTML += String.raw`
+                        <div class="card">
+                <h2>${info["name"]}</h2>
+                <img src="${info["avatar"]}" alt="">
+            </div>
+                        `
+                    })
+                    $jsontip.html(strHTML);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

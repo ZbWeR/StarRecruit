@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+span {
+    display: block;
+    width: 70%;
+    opacity: 1;
+    padding: .1rem;
+    font-size: 16px;
+    color: #f34336;
+    margin-top: .05rem;
+    transition: all .5s ease;
+}
+
+.span-hidden {
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    height: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(200deg, #f3e7e9, #e3eeff);
+}
+
+.container img {
+    /* height: 150px; */
+    display: inline-block;
+    max-width: 46%;
+    height: auto;
+}
+
+.container {
+    background-color: #fff;
+    width: 6.5rem;
+    height: 4.15rem;
+    border-radius: .05rem;
+    box-shadow: .05rem .05rem .05rem rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+.form-box {
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    width: 3.2rem;
+    height: 5rem;
+    border-radius: .05rem;
+    box-shadow: .02rem 0rem .1rem rgba(0, 0, 0, .1);
+    background-color: #d2b7d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: transform .5s ease-in-out;
+}
+
+.register-box,
+.login-box,
+.register-box form,
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.register-box,
+.login-box {
+    display: none;
+}
+
+.register-box h1,
+.login-box h1 {
+    font-size: 32px;
+}
+
+.form-box .login-box.active,
+.form-box .register-box.active {
+    display: block;
+    animation: hideIndex 0.5s;
+}
+
+@keyframes hideIndex {
+    0% {
+        opacity: 0;
+        transform: translate(100px, 0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0)
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: .25rem;
+    letter-spacing: .2em;
+    text-shadow: .04rem .04rem .04rem rgba(0, 0, 0, .2);
+}
+
+input {
+    display: block;
+    width: 70%;
+    border: none;
+    border-bottom: 1px solid #d6d600;
+    background-color: transparent;
+    padding: .1rem 0;
+    text-indent: 1em;
+    margin: .08rem 0;
+    font-size: .2rem;
+    color: #fff;
+
+}
+
+input::placeholder {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: .02rem;
+}
+
+input:focus {
+    outline: none;
+    color: #a262ad;
+    transition: .5s;
+}
+
+.form-box button {
+    margin-top: .15rem;
+    width: 70%;
+    background-color: #f6f6f6;
+    border: none;
+    border-radius: .08rem;
+    padding: .13rem;
+    color: #a262ad;
+    letter-spacing: .2em;
+}
+
+.con-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.con-box.left {
+    left: -2%;
+}
+
+.con-box.right {
+    right: -2%;
+}
+
+.con-box h2 {
+    color: #8e9aaf;
+    font-size: 25px;
+    letter-spacing: .03rem;
+    margin-bottom: .03rem;
+}
+
+.con-box p {
+    margin-top: .1rem;
+    font-size: 12px;
+    letter-spacing: .02rem;
+    color: #8e9aaf;
+}
+
+button {
+    /* border: none; */
+    margin-top: .08rem;
+    padding: .02rem 0;
+    width: 25%;
+    color: #a262ad;
+    border: 1px solid #d2b7d8;
+    background-color: #fff;
+    letter-spacing: .02rem;
+    border-radius: .05rem;
+}
+
+button:hover {
+    background-color: #a262ad;
+    color: #fff;
+}
+
+.enFontShadow {
+    text-shadow: 0 4px 6px rgba(238, 233, 239, 1);
+}
+
+.prompt {
+    display: none;
+}
+
+/*当页面大于 1200px 时，大屏幕，主要是 PC 端*/
+@media (min-width: 1200px) {
+    .container {
+        scale: 1.25;
+    }
+
+    .register-box h1,
+    .login-box h1 {
+        font-size: 32px;
+    }
+
+    .con-box h2 {
+        font-size: 25px;
+    }
+
+    .con-box p {
+        font-size: 12px;
+    }
+
+    span {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/*在 992 和 1199 像素之间的屏幕里，中等屏幕，分辨率低的 PC*/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .register-box h1,
+    .login-box h1 {
+        font-size: 30px;
+    }
+
+    .con-box h2 {
+        font-size: 22px;
+    }
+
+    .con-box p {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    span {
+        font-size: 14px;
+    }
+}
+
+/*在 768 和 991 像素之间的屏幕里，小屏幕，主要是 PAD*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .register-box h1,
+    .login-box h1 {
+        font-size: 28px;
+    }
+
+    .con-box h2 {
+        font-size: 18px;
+    }
+
+    .con-box p {
+        font-size: 10px;
+    }
+
+    button,
+    span {
+        font-size: 12px;
+    }
+}
+
+/*在 480 和 767 像素之间的屏幕里，超小屏幕，主要是手机*/
+@media (min-width: 480px) and (max-width: 767px) {
+
+    .register-box h1,
+    .login-box h1 {
+        font-size: 25px;
+    }
+
+    .con-box h2 {
+        font-size: 15px;
+    }
+
+    .con-box p {
+        font-size: 9px;
+    }
+
+    button,
+    span {
+        width: auto;
+        font-size: 9px;
+    }
+}
+
+/*在小于 480 像素的屏幕，微小屏幕，更低分辨率的手机*/
+@media (max-width: 479px) {
+    .container {
+        display: none;
+    }
+
+    .prompt {
+        display: block;
+        font-size: 28px;
+        text-align: center;
+    }
+}
