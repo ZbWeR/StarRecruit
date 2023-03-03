@@ -4,7 +4,7 @@
 
 ## 🎯 评卷须知
 
-GitPage访问链接: https://zbwer.github.io/zbwerStarStudio/
+GitPage访问链接: https://zbwer.github.io/StarRecruit/
 
 Mock页面获取的图片需要魔法才能正常显示,浏览时请搭配科技食用.
 
